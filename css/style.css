@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E0E8FF;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: url('../images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -9;
+}
+
+@media(max-width: 740px) {
+  body::before {
+    background: url('../images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+/* body .bg{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  z-index: -9;
+} */
+
+main {
+  max-width: 450px;
+  background: #FFFFFF;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+}
+
+.titulo {
+  width: 80%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.titulo h1 {
+  margin-top: 20px;
+  color: #1F2E55;
+}
+
+.titulo p {
+  margin-top: 20px;
+  color: #949EBC;
+}
+
+.informacao-preco {
+  width: 80%;
+  margin-top: 20px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F7F9FF;
+  border-radius: 1rem;
+}
+
+.informacao-preco .informacao {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  text-align: center;
+}
+
+.informacao-preco .informacao .preco p {
+  color: #1F2E55;
+  font-weight: 700;
+}
+
+.informacao-preco .informacao .preco span {
+  color: #949EBC;
+}
+
+.informacao-preco a {
+  color: #382AE1;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.informacao-preco a:hover {
+  color: #7E74F1;
+  text-decoration: none;
+}
+
+.pagamento {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 1rem;
+}
+
+.pagamento button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  background: #382AE1;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+  box-shadow: 10px 10px 10px  rgb(56, 42, 225, 0.2);
+}
+
+.pagamento a {
+  color: #949EBC;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+.pagamento a:hover {
+  color: #1F2E55;
+}
